@@ -1,0 +1,341 @@
+@charset "UTF-8";
+/*--------------------
+Body
+--------------------*/
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+body {
+	height: 100vh;
+	margin: 0;
+	background: #1d362c;
+	color: #363c44;
+	font-size: 14px;
+	font-family: "Century Gothic", sans-serif;
+}
+
+/*--------------------
+Boarding Pass
+--------------------*/
+.boarding-pass {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 840px;
+	height: 1600px;
+	background: #fff;
+	border-radius: 30px;
+	box-shadow: 0 5px 30px /* rgba(0, 0, 0, 0.2) */;
+	overflow: hidden;
+	text-transform: uppercase;
+	/*--------------------
+  Header
+  --------------------*/
+	/*--------------------
+  Cities
+  --------------------*/
+	/*--------------------
+  Infos
+  --------------------*/
+	/*--------------------
+  Strap
+  --------------------*/
+}
+
+.boarding-pass small {
+	display: block;
+	font-size: 30px;
+	color: #A2A9B3;
+}
+
+.boarding-pass strong {
+	font-size: 10px;
+	display: block;
+}
+
+/*Alitalia header*/
+.boarding-pass header {
+	background: #ad995c;
+	padding: 12px 20px;
+	height: 150px;
+}
+
+/*Alitalia text*/
+.boarding-pass header .logo {
+	float: left;
+	width: 100px;
+	height: 50px;
+}
+
+.boarding-pass header .flight {
+	float: right;
+	color: #fff;
+	text-align: right;
+}
+
+.boarding-pass header .flight small {
+	font-size: 8px;
+	margin-bottom: 2px;
+	opacity: 0.8;
+}
+
+.boarding-pass header .flight strong {
+	font-size: 18px;
+}
+
+.boarding-pass .cities {
+	position: relative;
+	height: 385px;
+}
+
+.boarding-pass .cities::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.boarding-pass .cities .city {
+	padding: 80px 70px;
+	float: left;
+	text-align: center;
+}
+
+.boarding-pass .cities .city:nth-child(2) {
+	float: right;
+}
+
+.boarding-pass .cities .city strong {
+	font-size: 118px;
+	font-weight: 300px;
+	color: #1f6349;
+}
+
+.boarding-pass .cities .city small {
+	font-size: 68px;
+	margin-left: 10px;
+	letter-spacing: 10px;
+	font-weight: 200px;
+}
+
+.boarding-pass .cities .airplane {
+	position: absolute;
+	width: 100px;
+	height: 150px;
+	top: 55%;
+	left: 42%;
+	opacity: 0;
+	transform: translate(-50%, -50%);
+	animation: move 4s infinite;
+}
+
+/* 비행기 움직이는 것 */
+@keyframes move { 
+	50% {
+		left: 60%;
+		opacity: 1;
+	}
+	
+	100% {
+		left:63%;
+		opacity:0;
+	}
+}
+.boarding-pass .infos {
+	display: flex;
+	height: 180px;
+}
+
+.boarding-pass .infos .places, .boarding-pass .infos .times {
+	width: 100%;
+	padding: 10px 0;
+}
+
+.boarding-pass .infos .places::after, .boarding-pass .infos .times::after
+	{
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.boarding-pass .infos .times strong {
+	transform-origin: left bottom;
+}
+
+.boarding-pass .infos .places {
+	background: #E2EFE2;
+	border-right: 1px solid #99D298;
+}
+
+.boarding-pass .infos .places small {
+	color: #97A1AD;
+}
+
+.boarding-pass .infos .places strong {
+	color: #239422;
+}
+
+.boarding-pass .infos .box {
+	padding: 10px 70px;
+	width: 33%;
+	float: left;
+}
+
+.boarding-pass .infos .box2 {
+	padding: 10px 70px;
+	width: 66%;
+	float: left;
+}
+
+.boarding-pass .infos .box3 {
+	padding: 10px 70px;
+	width: 100%;
+	float: left;
+}
+
+.boarding-pass .infos .box strong {
+	font-size: 50px;
+}
+
+.boarding-pass .infos .box small {
+	font-size: 32px;
+}
+
+.boarding-pass .infos .box2 strong {
+	font-size: 50px;
+}
+
+.boarding-pass .infos .box2 small {
+	font-size: 32px;
+}
+
+.boarding-pass .infos .box3 strong {
+	font-size: 50px;
+}
+
+.boarding-pass .infos .box3 small {
+	font-size: 32px;
+}
+
+.boarding-pass .strap {
+	clear: both;
+	position: relative;
+	border-top: 2px solid #212121;
+	height: 180px;
+	padding: 0px 50px;
+}
+
+.boarding-pass .strap::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.boarding-pass .strap .box {
+	padding: 23px 50px 40px 20px;
+}
+
+.boarding-pass .strap .box div {
+	margin-bottom: 10px;
+}
+
+.boarding-pass .strap .box div small {
+	font-size: 32px;
+}
+
+.boarding-pass .strap .box div strong {
+	font-size: 50px;
+}
+
+.boarding-pass .strap .box sup {
+	font-size: 8px;
+	position: relative;
+	top: -5px;
+}
+
+.boarding-pass .strap .qrcode {
+	position: absolute;
+	top: 40px;
+	right: 50px;
+	width: 200px;
+	height: 200px;
+}
+
+div.cardContainer {
+	height: 1600px;
+	width: 840px;
+	display: inline-block;
+}
+
+div.cardContainer div {
+	height: inherit;
+	width: inherit;
+	color: #FFF;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	transition: all 1.5s;
+	-webkit-transition: all 1.5s;
+	-moz-transition: all 1.5s;
+	-o-transition: all 1.5s;
+}
+
+.red {
+	background-color: Red;
+}
+
+.pink {
+	background-color: pink;
+}
+
+/* .boarding-pass div:last-child {
+	position: relative;
+	top: -1600px;
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+}
+
+.boarding-pass:hover div:first-child {
+	transform: rotateY(-180deg);
+	-webkit-transform: rotateY(-180deg);
+	-ms-transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);
+	-o-transform: rotateY(-180deg);
+}
+
+.boarding-pass:hover div:last-child {
+	transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+} */
+
+div.cardContainer div:last-child {
+	position: relative;
+	top: -1600px;
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+}
+
+div.cardContainer:hover div:first-child {
+	transform: rotateY(-180deg);
+	-webkit-transform: rotateY(-180deg);
+	-ms-transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);
+	-o-transform: rotateY(-180deg);
+}
+
+div.cardContainer:hover div:last-child {
+	transform: rotateY(0deg);
+	-webkit-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+}
