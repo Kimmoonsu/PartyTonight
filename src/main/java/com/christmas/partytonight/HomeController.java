@@ -56,6 +56,10 @@ public class HomeController {
 		return "card";
 	}
 	
-	
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String login(HttpServletRequest request, Model model) throws Exception {
+//		
+		return "login";
+	}
 	
 }
