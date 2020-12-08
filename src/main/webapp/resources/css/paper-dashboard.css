@@ -33,6 +33,7 @@
  * ========================================================= */
 /*      light colors - used for select dropdown         */
 /*           Social buttons            */
+
 .ct-blue {
   stroke: #7A9E9F !important;
 }
@@ -5872,13 +5873,18 @@ a.dropdown-toggle[aria-expanded="true"] .caret {
   background :0;
   /* border-bottom : 2px solid #ad995c; */
   font-size: 21px;
-  width:68%;
+  width:75%;
   height:50px;
   outline:none;
 }
 .form-control.input-no-border::placeholder {
-	color : #111111;
+	color : #ad995c;
 	
+}
+ .form-control.input-no-border2.imgBtn
+{
+   position: absolute; top:0;
+    width:15vw;
 }
 .form-control.input-no-border2 {
   border: 0 none;
@@ -5889,9 +5895,9 @@ a.dropdown-toggle[aria-expanded="true"] .caret {
   display:inline;
   outline:none;
   text-align:right;
-  width:29%;
-  height:50px;
   
+  width:15%;
+  height:50px;
   outline:none;
 }
 .form-control.input-no-border2::placeholder {
@@ -6323,8 +6329,9 @@ form label.radio, form label.checkbox {
 
 .form-group {
   position: relative;
-  border-bottom : 2px solid #ad995c;
-  padding-top: 300px;
+  border-bottom : 1px solid #ad995c;
+  width:80%;
+  margin:0 auto;
 }
 
 .form-horizontal .checkbox,
@@ -9374,8 +9381,7 @@ input.ct-danger + span + label + span.switch-right {
   height: 100vh;
 }
 .wrapper.wrapper-full-page {
-  height: auto;
-  min-height: 100vh;
+  padding-top: 55vh;
 }
 
 .full-page:after, .full-page:before {
@@ -9398,6 +9404,8 @@ input.ct-danger + span + label + span.switch-right {
   position: relative;
   z-index: 4;
 }
+
+/*keyboard size*/ 
 .full-page > .content {
   min-height: calc(100vh - 70px);
 }
@@ -9436,10 +9444,13 @@ input.ct-danger + span + label + span.switch-right {
   color: #FFFFFF;
   font-size: 14px;
 }
-
+.login-page {
+	height:50px;
+}
 .login-page > .content,
 .lock-page > .content {
-  padding-top: 20vh;
+  
+  height:50px;
 }
 
 .login-page .card, .lock-page .card {
@@ -10027,7 +10038,7 @@ input.ct-danger + span + label + span.switch-right {
 
   .navbar .container {
     left: 0;
-    width: 100%;
+    width: 50%;
     -webkit-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -moz-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);
     -o-transition: all 0.33s cubic-bezier(0.685, 0.0473, 0.346, 1);

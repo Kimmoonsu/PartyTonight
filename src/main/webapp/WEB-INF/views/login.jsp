@@ -43,42 +43,14 @@
 			data-image="resources/image/background.png">
 			<!--   you can change the color of the filter page using: data-color="blue | azure | green | orange | red | purple" -->
 			<div class="content">
-				<div class="container">
-					<div class="content">
-						<div class="form-group">
-							<input type="email"
-								placeholder="Enter email" class="form-control input-no-border" />
-								<input type="email"
-								name="name" value="JOIN" class="form-control input-no-border2"/>
-						</div>
 
+				<div class="form-group">
+					<input type="text" placeholder="PASSENGER NAME"
+						class="form-control input-no-border" />
+					<div class="form-control input-no-border2">
+						<input type="image" src="resources/image/entrance.png" name="name"
+							class="form-control input-no-border2 imgBtn" />
 					</div>
-					<!-- <div class="row">
-              <div class="col-md-4 col-sm-6 col-md-offset-4 col-sm-offset-3">
-                <form method="#" action="#">
-                  <div class="card" data-background="color" data-color="blue">
-                    
-                    <div class="content">
-                      <div class="form-group">
-                        <label>Email address</label>
-                        <input
-                          type="email"
-                          placeholder="Enter email"
-                          class="form-control input-no-border"
-                        />
-                      </div>
-                      
-                    </div>
-                    <div class="footer text-center">
-                      <button type="submit" class="btn btn-fill btn-wd ">Let's go</button>
-                      <div class="forgot">
-                        <a href="#pablo">Forgot your password?</a>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div> -->
 				</div>
 			</div>
 		</div>
@@ -136,7 +108,7 @@
 <script src="resources/js/fullcalendar.min.js"></script>
 
 <!-- Paper Dashboard PRO Core javascript and methods for Demo purpose -->
-<script src="resources/js/paper-dashboard.js"></script>
+<script src="resources/js/paper-dashboard.js?ver=2"></script>
 
 <!-- Paper Dashboard PRO DEMO methods, don't include it in your project! -->
 <script src="resources/js/demo.js"></script>
