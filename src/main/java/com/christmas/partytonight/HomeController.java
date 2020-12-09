@@ -1,5 +1,5 @@
 package com.christmas.partytonight;
-
+import org.springframework.web.servlet.ModelAndView;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -41,25 +41,36 @@ public class HomeController {
 	}
 	
 	
-	@RequestMapping(value = "/card", method = RequestMethod.GET)
-	public String card(HttpServletRequest request, Model model) throws Exception {
-//		String name = request.getParameter("name");
-//		String str[] = service.enterTicket(name);
+	@RequestMapping(value = "/checkLogin", method = RequestMethod.GET)
+	public ModelAndView checkLogin(HttpServletRequest request, Model model) throws Exception {
+		String userName = request.getParameter("userName");
+		System.out.println("UserNamer : " + userName);
+		String str[] = service.enterTicket(userName);
 //		System.out.println("str : " + str);
-//		if (str == null) {
-//			System.out.println("당신은 초대된 사람이 아닙니다.");
-//		} else {			
-//			model.addAttribute("name", str[0]);
-//			model.addAttribute("seatNumber", str[1]);
-//			System.out.println("name : " + str[0] + " seat number : " + str[1]);
-//		}
-		return "card";
+		ModelAndView mv = new ModelAndView("jsonView");
+		if (str == null) {
+			mv.addObject("result", -1);
+		} else {			
+			mv.addObject("result", 1);
+		}
+		return mv;
 	}
 	
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(HttpServletRequest request, Model model) throws Exception {
-//		
+		
+		
 		return "login";
 	}
+	
+	@RequestMapping(value = "/card", method = RequestMethod.GET)
+	public String card(HttpServletRequest request, Model model) throws Exception {
+		String userName = request.getParameter("userName");
+		String str[] = service.enterTicket(userName);
+		model.addAttribute("name", str[0]);
+		model.addAttribute("seatNumber", str[1]);
+		return "card";
+	}
+	
 	
 }

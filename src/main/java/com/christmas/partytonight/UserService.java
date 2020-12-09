@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 
 @Service("UserService")
 public class UserService {
-	private static final String PATH = "/Users/Kimmoonsu/Documents/workspace-spring-tool-suite-4-4.8.1.RELEASE/PartyTonight/src/main/resources/data/database.txt";
+	private static final String PATH = "C:\\Users\\admin\\Documents\\SpringWorkpsace\\PartyTonight\\PartyTonight\\src\\main\\resources\\data\\database.txt";
 	private String seatNumber[] = {"01A", "01B", "01C", "02A", "02B", "02C"};
 	public void writeFile(String name, String seat) {
 //		String path = System.getProperty("user.dir");

@@ -9381,7 +9381,7 @@ input.ct-danger + span + label + span.switch-right {
   height: 100vh;
 }
 .wrapper.wrapper-full-page {
-  padding-top: 55vh;
+  padding-top: 80vh;
 }
 
 .full-page:after, .full-page:before {
@@ -9407,7 +9407,6 @@ input.ct-danger + span + label + span.switch-right {
 
 /*keyboard size*/ 
 .full-page > .content {
-  min-height: calc(100vh - 70px);
 }
 .full-page .full-page-background {
   position: absolute;
@@ -9421,7 +9420,7 @@ input.ct-danger + span + label + span.switch-right {
   background-position: center top;
 }
 .full-page[data-image]:after, .full-page.has-image:after {
-  opacity: .0;
+   opacity: .0;
 }
 .full-page[data-color="blue"]:after {
   background-color: rgba(96, 133, 134, 0.7);

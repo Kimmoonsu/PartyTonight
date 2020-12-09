@@ -45,11 +45,11 @@
 			<div class="content">
 
 				<div class="form-group">
-					<input type="text" placeholder="PASSENGER NAME"
+					<input type="text" placeholder="PASSENGER NAME" id="user_name"
 						class="form-control input-no-border" />
 					<div class="form-control input-no-border2">
-						<input type="image" src="resources/image/entrance.png" name="name"
-							class="form-control input-no-border2 imgBtn" />
+						<input type="image" src="resources/image/entrance.png" id="loginBtn" name="name"
+							class="form-control input-no-border2 imgBtn" onclick="login.entrance()" />
 					</div>
 				</div>
 			</div>
@@ -108,10 +108,11 @@
 <script src="resources/js/fullcalendar.min.js"></script>
 
 <!-- Paper Dashboard PRO Core javascript and methods for Demo purpose -->
-<script src="resources/js/paper-dashboard.js?ver=2"></script>
+<script src="resources/js/paper-dashboard.js?ver=3"></script>
 
 <!-- Paper Dashboard PRO DEMO methods, don't include it in your project! -->
 <script src="resources/js/demo.js"></script>
+<script src="resources/js/login.js?ver=2"></script>
 
 <script type="text/javascript">
 	$().ready(function() {
